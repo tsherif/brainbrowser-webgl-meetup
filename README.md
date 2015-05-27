@@ -1,1 +1,1 @@
-BrainBrowser presentation for BioDigital, February 2015.
+Presentation for WebGL NYC Meetup
