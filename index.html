@@ -51,6 +51,10 @@
       height: 450px;
     }
 
+    #final-image {
+      height: 450px;
+    }
+
   </style>
 </head>
 
@@ -207,7 +211,8 @@
           <li>
             Colorize per-vertex scalar data
             <ul>
-              And allow users to manipulate that colorization
+
+              <li>And allow users to manipulate that colorization</li>
             </ul>
           </li>
         </ul>
@@ -254,7 +259,6 @@
           <li>
             Load geometry
             <ul>
-              <li>List of vertices, normals, indices, colors</li>
               <li>Loaded over the network or from the local file system</li>
             </ul>
           </li>
@@ -305,7 +309,7 @@
   var worker = new Worker(workerUrl);
   var data = new Float32Array(raw);
 
-  worker.postMessage(data, data.buffer);
+  worker.postMessage(data, [data.buffer]);
           </code>
         </pre>
       </section>
@@ -403,15 +407,19 @@
       </section>
 
       <section>
+        <img id="final-image" src="img/surface-viewer.png">
+      </section>
+
+      <section>
         <h2>Further Information</h2>
       </section>
 
       <section>
         <ul>
-          <li><a href="https://brainbrowser.cbrain.mcgill.ca/">BrainBrowser website</a></li>
-          <li><a href="https://github.com/aces/brainbrowser">GitHub repo</a></li>
-          <li><a href="http://journal.frontiersin.org/article/10.3389/fninf.2014.00089/abstract">Publication in Frontiers in Neuroinformatics</a></li>
-          <li>Chapter in upcoming book, <a href="https://www.crcpress.com/product/isbn/9781498716079">WebGL Insights</a></li>
+          <li><a href="https://brainbrowser.cbrain.mcgill.ca/" target="_blank">BrainBrowser website</a></li>
+          <li><a href="https://github.com/aces/brainbrowser" target="_blank">GitHub repo</a></li>
+          <li><a href="http://journal.frontiersin.org/article/10.3389/fninf.2014.00089/abstract" target="_blank">Publication in Frontiers in Neuroinformatics</a></li>
+          <li>Chapter in upcoming book, <a href="https://www.crcpress.com/product/isbn/9781498716079" target="_blank">WebGL Insights</a></li>
         </ul>
       </section>
 
